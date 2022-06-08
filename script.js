@@ -9,13 +9,11 @@ function getLoc(e){
     .then((response) => response.json())
     .then((data) => {
         document.querySelector(".container").innerHTML = `
-            <div>
-            </div>
             <div class="locInfo">
                 <h1>${data.resolvedAddress}</h1>
                 <p>${data.timezone}</p>
                 <p>Last checked at ${data.currentConditions.datetime}</p>
-                <p>${data.currentConditions.conditions}</p>
+                <p>${data.currentConditions.conditions}, ${data.currentConditions.icon}</p>
                 <p>${data.days[0].description}</p>
                 <p>${data.currentConditions.temp}°C</p>
                 <p>${data.currentConditions.humidity}%</p>
