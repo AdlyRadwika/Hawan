@@ -14,9 +14,12 @@ function getLoc(e){
             <div class="locInfo">
                 <h1>${data.resolvedAddress}</h1>
                 <p>${data.timezone}</p>
-                <p>${data.currentConditions.datetime}</p>
+                <p>Last checked at ${data.currentConditions.datetime}</p>
                 <p>${data.currentConditions.conditions}</p>
+                <p>${data.days[0].description}</p>
                 <p>${data.currentConditions.temp}°C</p>
+                <p>${data.currentConditions.humidity}%</p>
+                <p>${data.currentConditions.windspeed} km/hour</p>
             </div>
         `;
 
