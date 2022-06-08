@@ -1,3 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+.welcome{
+    text-align: center;
+}
+
+.search{
+    margin: auto;
+    width: fit-content;
+}
+
+input{
+    text-align: center;
+}
+
+.container{
+    margin: auto;
+    width: fit-content;
+}
+
 .weatherIcon{
     height: 256x;
     width: 256px;
