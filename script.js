@@ -1,4 +1,4 @@
-document.querySelector('#search').addEventListener('click', getLoc)
+// document.querySelector('#search').addEventListener('click', getLoc)
 
 document.querySelector('#locName').addEventListener('search', getLoc)
 

@@ -11,10 +11,23 @@
 .search{
     margin: auto;
     width: fit-content;
+    padding: 25px;
+    height: 45px;
 }
 
 input{
     text-align: center;
+    width: 500px;
+    height: 45px;
+    box-sizing: content-box;
+    border-radius: 15px;
+    border:0;
+    box-shadow:4px 4px 10px rgba(0,0,0,0.5);
+    transition: .3s box-shadow;
+}
+
+input:hover{
+    box-shadow:4px 4px 10px rgba(0,0,0,0.7);
 }
 
 .container{
