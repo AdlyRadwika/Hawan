@@ -63,13 +63,13 @@ input:hover{
     text-align: center;
 }
 
-.container #hourly{
+.container .days{
     padding: 20px;
     display: flex;
     margin-inline: 10px;
 }
 
-.row .weatherIcon2{
+.days .weatherIcon2{
     height: 128px;
     width: 128px;
 }

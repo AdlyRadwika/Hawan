@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hawan</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -49,103 +51,131 @@
                     Last checked at ...
                 </div>
             </div>
-            <!-- PER 3 HOUR WEATHER FORECAST -->
-            <div class="row" id="days">
-                <!-- first -->
-                <div class="card w-100">
-                    <h1 class="card-header">Preview of the city you search</h1>
-                        <div class="card-body">
-                            <div class="locInfo">
-                                <h4>Last checked at ...</h4>
-                                <div class="conds">
-                                    <img src="assets/icons2/cloudy.svg" class="weatherIcon2 mx-auto">
-                                    <div class="desc">
-                                        <h4>Cloudy</h4>
+            <!-- 7 DAYS WEATHER FORECAST -->
+            <div class="days">
+                <div class="owl-carousel owl-theme">
+                    <!-- first -->
+                    <div class="card w-100">
+                        <h1 class="card-header">${data.days[i].datetime}</h1>
+                            <div class="card-body">
+                                <div class="locInfo">
+                                    <div class="conds">
+                                        <img src="assets/icons2/${data.days[i].icon}.svg" class="weatherIcon2 mx-auto">
+                                        <div class="desc">
+                                            <h4>${data.days[i].description}</h4>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <h5>Temperature</h5>
-                                        <p>12°C</p>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5>Max Temp.</h5>
+                                            <p>${data.days[i].tempmax}°C</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>Avg Temp.</h5>
+                                            <p>${data.days[i].temp}°C</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>Min Temp.</h5>
+                                            <p>${data.days[i].tempmin}°C</p>
+                                        </div>    
                                     </div>
-                                    <div class="col-4">
-                                        <h5>Kelembapan</h5>
-                                        <p>78%</p>
+                                </div>  
+                            </div>
+                    </div> 
+                    <!-- second  -->
+                    <div class="card w-100">
+                        <h1 class="card-header">Preview of the city you search</h1>
+                            <div class="card-body">
+                                <div class="locInfo">
+                                    <h4>Last checked at ...</h4>
+                                    <div class="conds">
+                                        <img src="assets/icons2/cloudy.svg" class="weatherIcon2 mx-auto">
+                                        <div class="desc">
+                                            <h4>Cloudy</h4>
+                                        </div>
                                     </div>
-                                    <div class="col-4">
-                                        <h5>Wind</h5>
-                                        <p>11 kmh</p>
-                                    </div>    
-                                </div>
-                            </div>  
-                        </div>
-                </div> 
-                <!-- second  -->
-                <div class="card w-100">
-                    <h1 class="card-header">Preview of the city you search</h1>
-                        <div class="card-body">
-                            <div class="locInfo">
-                                <h4>Last checked at ...</h4>
-                                <div class="conds">
-                                    <img src="assets/icons2/cloudy.svg" class="weatherIcon2 mx-auto">
-                                    <div class="desc">
-                                        <h4>Cloudy</h4>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5>Temperature</h5>
+                                            <p>12°C</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>Kelembapan</h5>
+                                            <p>78%</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>Wind</h5>
+                                            <p>11 kmh</p>
+                                        </div>    
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <h5>Temperature</h5>
-                                        <p>12°C</p>
+                                </div>  
+                            </div>
+                    </div> 
+                    <!-- third -->
+                    <div class="card w-100">
+                        <h1 class="card-header">Preview of the city you search</h1>
+                            <div class="card-body">
+                                <div class="locInfo">
+                                    <h4>Last checked at ...</h4>
+                                    <div class="conds">
+                                        <img src="assets/icons2/cloudy.svg" class="weatherIcon2 mx-auto">
+                                        <div class="desc">
+                                            <h4>Cloudy</h4>
+                                        </div>
                                     </div>
-                                    <div class="col-4">
-                                        <h5>Kelembapan</h5>
-                                        <p>78%</p>
+                                    <div class="row">
+                                        <div class="col-4">
+                                            <h5>Temperature</h5>
+                                            <p>12°C</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>Kelembapan</h5>
+                                            <p>78%</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h5>Wind</h5>
+                                            <p>11 kmh</p>
+                                        </div>    
                                     </div>
-                                    <div class="col-4">
-                                        <h5>Wind</h5>
-                                        <p>11 kmh</p>
-                                    </div>    
-                                </div>
-                            </div>  
-                        </div>
-                </div> 
-                <!-- third -->
-                <div class="card w-100">
-                    <h1 class="card-header">Preview of the city you search</h1>
-                        <div class="card-body">
-                            <div class="locInfo">
-                                <h4>Last checked at ...</h4>
-                                <div class="conds">
-                                    <img src="assets/icons2/cloudy.svg" class="weatherIcon2 mx-auto">
-                                    <div class="desc">
-                                        <h4>Cloudy</h4>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-4">
-                                        <h5>Temperature</h5>
-                                        <p>12°C</p>
-                                    </div>
-                                    <div class="col-4">
-                                        <h5>Kelembapan</h5>
-                                        <p>78%</p>
-                                    </div>
-                                    <div class="col-4">
-                                        <h5>Wind</h5>
-                                        <p>11 kmh</p>
-                                    </div>    
-                                </div>
-                            </div>  
-                        </div>
-                </div> 
+                                </div>  
+                            </div>
+                    </div> 
+                </div>
             </div>
         </div>
     </main>
 
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <!-- <script src="/assets/js/days.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+        <!--Jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <!-- Owl Carousel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- custom JS code after importing jquery and owl -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".owl-carousel").owlCarousel();
+        });
 
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
 </body>
 </html>

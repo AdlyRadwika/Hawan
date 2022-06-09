@@ -9,37 +9,34 @@ function getLoc(e){
     fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${name}?unitGroup=metric&include=days%2Ccurrent%2Chours%2Cevents&key=7TZUUUYQV7KQT9QV96MQJ2LPQ&contentType=json`)
     .then((response) => response.json())
     .then((data) => {
-        document.querySelector(".container").innerHTML = `
-        <div class="card w-100">
-            <h1 class="card-header">${data.resolvedAddress}</h1>
+        document.querySelector(".days").innerHTML = `
+            <div class="card w-100">
+            <h1 class="card-header">${data.days[0].datetime}</h1>
                 <div class="card-body">
                     <div class="locInfo">
                         <div class="conds">
-                            <img src="assets/icons2/${data.currentConditions.icon}.svg" class="weatherIcon mx-auto">
-                            <div class="desc d-grip gap-1">
-                                <h4>${data.currentConditions.conditions}</h4>
+                            <img src="assets/icons2/${data.days[0].icon}.svg" class="weatherIcon2 mx-auto">
+                            <div class="desc">
+                                <h4>${data.days[0].description}</h4>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-4">
-                                <h5>Suhu</h5>
-                                <p>${data.currentConditions.temp}°C</p>
+                                <h5>Max Temp.</h5>
+                                <p>${data.days[0].tempmax}°C</p>
                             </div>
                             <div class="col-4">
-                                <h5>Kelembapan</h5>
-                                <p>${data.currentConditions.humidity}%</p>
+                                <h5>Avg Temp.</h5>
+                                <p>${data.days[0].temp}°C</p>
                             </div>
                             <div class="col-4">
-                                <h5>Angin</h5>
-                                <p>${data.currentConditions.windspeed} km/hour</p>
+                                <h5>Min Temp.</h5>
+                                <p>${data.days[0].tempmin}°C</p>
                             </div>    
                         </div>
                     </div>  
                 </div>
-                <div class="card-footer" id="card-footer">
-                    Last checked at ${data.currentConditions.datetime}
-                </div>
-        </div>  
+        </div> 
         `;
 
     }).catch((err) => {
