@@ -33,11 +33,20 @@ input:hover{
     display: flex;
 }
 
+/* .container .card-header{
+     background-color: darkgray;
+} */
+
+.locInfo .conds{
+    text-align: center;
+}
+.locInfo .weatherIcon{
+    height: 256x;
+    width: 256px;
+
+}
+
 .locInfo .row .col-4,h5{
     text-align: center;
 }
 
-.weatherIcon{
-    height: 256x;
-    width: 256px;
-}

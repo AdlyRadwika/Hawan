@@ -10,17 +10,33 @@ function getLoc(e){
     .then((response) => response.json())
     .then((data) => {
         document.querySelector(".container").innerHTML = `
-            <div class="locInfo">
-                <h1>${data.resolvedAddress}</h1>
-                <p>${data.timezone}</p>
-                <p>Last checked at ${data.currentConditions.datetime}</p>
-                <img src="assets/icons2/${data.currentConditions.icon}.svg" class="weatherIcon">
-                <p>${data.currentConditions.conditions}</p>
-                <p>${data.days[0].description}</p>
-                <p>${data.currentConditions.temp}°C</p>
-                <p>${data.currentConditions.humidity}%</p>
-                <p>${data.currentConditions.windspeed} km/hour</p>
-            </div>
+        <div class="card w-100">
+            <h1 class="card-header">${data.resolvedAddress}</h1>
+                <div class="card-body">
+                    <div class="locInfo">
+                        <p>Last checked at ${data.currentConditions.datetime}</p>
+                        <div class="conds">
+                            <img src="assets/icons2/${data.currentConditions.icon}.svg" class="weatherIcon mx-auto">
+                            <p>${data.currentConditions.conditions}</p>
+                            <p>${data.days[0].description}</p>    
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <h5>Suhu</h5>
+                                <p>${data.currentConditions.temp}°C</p>
+                            </div>
+                            <div class="col-4">
+                                <h5>Kelembapan</h5>
+                                <p>${data.currentConditions.humidity}%</p>
+                            </div>
+                            <div class="col-4">
+                                <h5>Angin</h5>
+                                <p>${data.currentConditions.windspeed} km/hour</p>
+                            </div>    
+                        </div>
+                    </div>  
+                </div>
+        </div>   
         `;
 
     }).catch((err) => {

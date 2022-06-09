@@ -16,7 +16,6 @@
         </div>
         <div class="search">
             <input id="locName" class="form-control w-75 mx-auto" type="search" placeholder="Search by cities">
-            <!-- <button id="search">🔍</button> -->
         </div>
         <div class="container">
             <!-- the data here -->
@@ -24,18 +23,19 @@
                 <h1 class="card-header">${data.resolvedAddress}</h1>
                     <div class="card-body">
                         <div class="locInfo">
-                            <p>${data.timezone}</p>
                             <p>Last checked at ${data.currentConditions.datetime}</p>
-                            <img src="assets/icons2/${data.currentConditions.icon}.svg" class="weatherIcon">
-                            <p>${data.currentConditions.conditions}</p>
-                            <p>${data.days[0].description}</p>
+                            <div class="conds">
+                                <img src="assets/icons2/cloudy.svg" class="weatherIcon mx-auto">
+                                <p>${data.currentConditions.conditions}</p>
+                                <p>${data.days[0].description}</p>    
+                            </div>
                             <div class="row">
                                 <div class="col-4">
                                     <h5>Suhu</h5>
                                     <p>${data.currentConditions.temp}°C</p>
                                 </div>
                                 <div class="col-4">
-                                    <h5>Humidity</h5>
+                                    <h5>Kelembapan</h5>
                                     <p>${data.currentConditions.humidity}%</p>
                                 </div>
                                 <div class="col-4">
@@ -45,9 +45,7 @@
                             </div>
                         </div>  
                     </div>
-            </div>
-            
-
+            </div>   
         </div>
     </main>
 
