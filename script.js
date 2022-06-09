@@ -14,7 +14,6 @@ function getLoc(e){
             <h1 class="card-header">${data.resolvedAddress}</h1>
                 <div class="card-body">
                     <div class="locInfo">
-                        <h4>Last checked at ${data.currentConditions.datetime}</h4>
                         <div class="conds">
                             <img src="assets/icons2/${data.currentConditions.icon}.svg" class="weatherIcon mx-auto">
                             <div class="desc d-grip gap-1">
@@ -36,6 +35,9 @@ function getLoc(e){
                             </div>    
                         </div>
                     </div>  
+                </div>
+                <div class="card-footer" id="card-footer">
+                    Last checked at ${data.currentConditions.datetime}
                 </div>
         </div>  
         `;

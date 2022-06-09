@@ -30,13 +30,12 @@ input:hover{
 .container{
     padding: 40px;
     margin: auto;
-    display: flex;
+    display: relative;
 }
 
 /* .container .card-header{
      background-color: darkgray;
 } */
-
 .locInfo .conds{
     text-align: center;
 }
@@ -58,5 +57,20 @@ input:hover{
 
 .locInfo .row h5{
     opacity: 70%;
+}
+
+#card-footer{
+    text-align: center;
+}
+
+.container #hourly{
+    padding: 20px;
+    display: flex;
+    margin-inline: 10px;
+}
+
+.row .weatherIcon2{
+    height: 128px;
+    width: 128px;
 }
 
