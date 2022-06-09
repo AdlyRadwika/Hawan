@@ -14,11 +14,12 @@ function getLoc(e){
             <h1 class="card-header">${data.resolvedAddress}</h1>
                 <div class="card-body">
                     <div class="locInfo">
-                        <p>Last checked at ${data.currentConditions.datetime}</p>
+                        <h4>Last checked at ${data.currentConditions.datetime}</h4>
                         <div class="conds">
                             <img src="assets/icons2/${data.currentConditions.icon}.svg" class="weatherIcon mx-auto">
-                            <p>${data.currentConditions.conditions}</p>
-                            <p>${data.days[0].description}</p>    
+                            <div class="desc d-grip gap-1">
+                                <h4>${data.currentConditions.conditions}</h4>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-4">
@@ -36,7 +37,7 @@ function getLoc(e){
                         </div>
                     </div>  
                 </div>
-        </div>   
+        </div>  
         `;
 
     }).catch((err) => {
