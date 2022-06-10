@@ -11,6 +11,7 @@ function getLoc(e){
     .then((data) => {
         
         const days = document.querySelector(".container2 .row");
+        days.innerHTML = ``;
         for (let i = 1; i < 4; i++) {
             days.innerHTML += `                                               
                 <div class="col-md-4">
