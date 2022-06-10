@@ -9,7 +9,7 @@ function getLoc(e){
     fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${name}?unitGroup=metric&include=days%2Ccurrent%2Chours%2Cevents&key=7TZUUUYQV7KQT9QV96MQJ2LPQ&contentType=json`)
     .then((response) => response.json())
     .then((data) => {
-        document.querySelector(".container").innerHTML = `
+        document.querySelector(".test").innerHTML = `
         <div class="card w-100">
             <h1 class="card-header">${data.resolvedAddress}</h1>
                 <div class="card-body">
