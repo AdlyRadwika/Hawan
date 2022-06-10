@@ -15,7 +15,7 @@ function getLoc(e){
         for (let i = 0; i < 3; i++) {
             days.innerHTML += `                                               
                 <div class="col-md-4">
-                    <div class="card w-100">
+                    <div class="card w-100 h-100">
                         <h1 class="card-header">${data.days[i].datetime}</h1>
                             <div class="card-body">
                                 <div class="locInfo">
