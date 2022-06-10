@@ -10,9 +10,10 @@ function getLoc(e){
     .then((response) => response.json())
     .then((data) => {
         
-        const days = document.querySelector(".container2");
-        for (let i = 1; i < 8; i++) {
-            days.innerHTML += `
+        const days = document.querySelector(".container2 .row");
+        for (let i = 1; i < 4; i++) {
+            days.innerHTML += `                                               
+                <div class="col-md-4">
                     <div class="card w-100">
                         <h1 class="card-header">${data.days[i].datetime}</h1>
                             <div class="card-body">
@@ -39,41 +40,15 @@ function getLoc(e){
                                     </div>
                                 </div>  
                             </div>
-                    </div>   
+                    </div> 
+                </div>
             `;}
     }).catch((err) => {
 
-        document.querySelector(".daysLoop").innerHTML = ``
+        document.querySelector(".container2 .row").innerHTML = ``
         console.log('Location not found', err)
         
     ;});
     e.preventDefault();
 }
 
-
-//     $('.owl-carousel').owlCarousel({
-//         loop: true,
-//         margin: 10,
-//         nav: true,
-//         responsive: {
-//             0: {
-//                 items: 1
-//             },
-//             600: {
-//                 items: 2
-//             },
-//             1000: {
-//                 items: 3
-//             }
-//         }
-//     });
-
-
-//     const name = document.querySelector("#locName").value;
-
-//     $(name).on('search', function () {
-//         $('.owl-carousel')
-//         .trigger('add.owl.carousel')
-//         .trigger('refresh.owl.carousel');
-//       });
-// });

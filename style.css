@@ -50,7 +50,6 @@ input:hover{
     padding: 10px;
 }
 
-
 .locInfo .row .col-4,h5{
     text-align: center;
 }
@@ -69,6 +68,15 @@ input:hover{
     margin-inline: 10px;
 }
 
+.container2{
+    padding: 20px;;
+    margin:auto;
+    display: flex;
+}
+
+.container2 .row .card-header{
+    text-align: center;
+}
 
 .weatherIcon2{
     height: 128px;

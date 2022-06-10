@@ -10,8 +10,9 @@ function getLoc(e){
     .then((response) => response.json())
     .then((data) => {
                     
-        document.querySelector(".days").innerHTML = `
-            <div class="card w-100">
+        document.querySelector(".container2").innerHTML = `
+            
+        <div class="card w-100">
             <h1 class="card-header">${data.days[1].datetime}</h1>
                 <div class="card-body">
                     <div class="locInfo">
@@ -67,12 +68,13 @@ function getLoc(e){
                 </div>
         </div> 
         `;
+        
+
+
     }).catch((err) => {
 
-        document.querySelector(".container").innerHTML = `
-            <div class="locInfo">
-                <h1>Location not found!</h1>
-            </div>
+        document.querySelector(".container2").innerHTML = `
+
         `
         console.log('Location not found', err)
         
