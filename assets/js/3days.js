@@ -12,7 +12,7 @@ function getLoc(e){
         
         const days = document.querySelector(".container2 .row");
         days.innerHTML = ``;
-        for (let i = 1; i < 4; i++) {
+        for (let i = 0; i < 3; i++) {
             days.innerHTML += `                                               
                 <div class="col-md-4">
                     <div class="card w-100">
