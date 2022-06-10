@@ -9,7 +9,7 @@ function getLoc(e){
     fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${name}?unitGroup=metric&include=days%2Ccurrent%2Chours%2Cevents&key=7TZUUUYQV7KQT9QV96MQJ2LPQ&contentType=json`)
     .then((response) => response.json())
     .then((data) => {
-        document.querySelector(".test").innerHTML = `
+        document.querySelector(".container").innerHTML = `
         <div class="card w-100">
             <h1 class="card-header">${data.resolvedAddress}</h1>
                 <div class="card-body">
@@ -45,7 +45,7 @@ function getLoc(e){
     }).catch((err) => {
 
         document.querySelector(".container").innerHTML = `
-            <div class="locInfo">
+            <div class="test">
                 <h1>Location not found!</h1>
             </div>
         `
