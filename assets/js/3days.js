@@ -10,7 +10,7 @@ function getLoc(e){
     .then((response) => response.json())
     .then((data) => {
         
-        const days = document.querySelector(".container2 .row");
+        const days = document.querySelector(".test2 .row");
         days.innerHTML = ``;
         for (let i = 0; i < 3; i++) {
             days.innerHTML += `                                               
@@ -46,7 +46,7 @@ function getLoc(e){
             `;}
     }).catch((err) => {
 
-        document.querySelector(".container2 .row").innerHTML = ``
+        document.querySelector(".test2 .row").innerHTML = ``
         console.log('Location not found', err)
         
     ;});

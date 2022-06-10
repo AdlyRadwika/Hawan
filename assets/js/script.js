@@ -39,6 +39,10 @@ function getLoc(e){
                 <div class="card-footer" id="card-footer">
                     Last checked at ${data.currentConditions.datetime}
                 </div>
+        </div>
+        <div class="test2">
+            <div class="row" id="row">
+            </div>
         </div>  
         `;
 
@@ -47,6 +51,9 @@ function getLoc(e){
         document.querySelector(".container").innerHTML = `
             <div class="test">
                 <h1>Location not found!</h1>
+            </div>
+            <div class="test2">
+                <div class="row" id="row">
             </div>
         `
         console.log('Location not found', err)

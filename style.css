@@ -62,19 +62,13 @@ input:hover{
     text-align: center;
 }
 
-.container .days{
-    padding: 20px;
+.container .row {
+    padding-top: 20px;
     display: flex;
-    margin-inline: 10px;
+    
 }
 
-.container2{
-    padding: 20px;;
-    margin:auto;
-    display: flex;
-}
-
-.container2 .row .card-header{
+.container .row .card-header{
     text-align: center;
 }
 
