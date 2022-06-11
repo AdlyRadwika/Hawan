@@ -40,7 +40,7 @@ function getLoc(e){
                     </div>  
                 </div>
                 <div class="card-footer" id="card-footer">
-                    Last checked at ${timeAgo(timeStamp)}
+                    Updated ${timeAgo(timeStamp)}
                 </div>
         </div>
         <div class="test2">
@@ -83,12 +83,8 @@ function timeAgo(ts) {
     if (seconds > 24*3600) {
        return "yesterday";
     }
-
     if (seconds > 3600) {
        return "an hour ago";
-    }
-    if (seconds > 1800) {
-       return "30 minutes ago";
     }
     if (seconds > 60) {
        return Math.floor(seconds/60) + " minutes ago";

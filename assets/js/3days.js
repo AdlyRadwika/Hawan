@@ -12,11 +12,21 @@ function getLoc(e){
         
         const days = document.querySelector(".test2 .row");
         days.innerHTML = ``;
+
         for (let i = 0; i < 3; i++) {
+            
+            var day = new Date(data.days[i].datetime);
+            var formatDay = day.toLocaleString('en-US', {
+            weekday: 'short', // long, short, narrow
+            day: 'numeric', // numeric, 2-digit
+            year: 'numeric', // numeric, 2-digit
+            month: 'long', // numeric, 2-digit, long, short, narrow
+             });
+
             days.innerHTML += `                                               
                 <div class="col-md-4">
                     <div class="card w-100 h-100">
-                        <h1 class="card-header">${data.days[i].datetime}</h1>
+                        <h2 class="card-header">${formatDay}</h2>
                             <div class="card-body">
                                 <div class="locInfo">
                                     <div class="conds">
