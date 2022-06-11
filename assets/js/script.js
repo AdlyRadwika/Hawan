@@ -9,6 +9,9 @@ function getLoc(e){
     fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${name}?unitGroup=metric&include=days%2Ccurrent%2Chours%2Cevents&key=7TZUUUYQV7KQT9QV96MQJ2LPQ&contentType=json`)
     .then((response) => response.json())
     .then((data) => {
+
+        var timeStamp = data.currentConditions.datetimeEpoch
+
         document.querySelector(".container").innerHTML = `
         <div class="card w-100">
             <h1 class="card-header">${data.resolvedAddress}</h1>
@@ -37,7 +40,7 @@ function getLoc(e){
                     </div>  
                 </div>
                 <div class="card-footer" id="card-footer">
-                    Last checked at ${data.currentConditions.datetime}
+                    Last checked at ${timeAgo(timeStamp)}
                 </div>
         </div>
         <div class="test2">
@@ -60,4 +63,34 @@ function getLoc(e){
         
     ;});
     e.preventDefault();
+
+}
+
+function timeAgo(ts) {
+    // This function computes the delta between the
+    // provided timestamp and the current time, then test
+    // the delta for predefined ranges.
+
+    var d=new Date();  // Gets the current time
+    var nowTs = Math.floor(d.getTime()/1000); // getTime() returns milliseconds, and we need seconds, hence the Math.floor and division by 1000
+    var seconds = nowTs-ts;
+
+    // more that two days
+    if (seconds > 2*24*3600) {
+       return "a few days ago";
+    }
+    // a day
+    if (seconds > 24*3600) {
+       return "yesterday";
+    }
+
+    if (seconds > 3600) {
+       return "an hour ago";
+    }
+    if (seconds > 1800) {
+       return "30 minutes ago";
+    }
+    if (seconds > 60) {
+       return Math.floor(seconds/60) + " minutes ago";
+    }
 }
