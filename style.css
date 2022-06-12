@@ -81,3 +81,15 @@ input:hover{
     width: 128px;
 }
 
+.test3{
+    padding-top: 20px;
+}
+
+.test3 .weatherIcon3{
+    height: 30px;
+    width: 30px;
+}
+
+.test3 .time{
+    margin-bottom: 0;
+}
