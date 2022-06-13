@@ -46,6 +46,19 @@ function getLoc(e){
         <div class="test2">
             <div class="row" id="row">
             </div>
+        </div>
+        <div class="test3">
+            <div class="card w-100">
+                <div class="card-header">
+                    <h4>Hourly Weather Forecast</h4> 
+                </div>
+                <div class="card-body">
+                    <div class="scrollmenu">
+                        <div class="row flex-row flex-nowrap">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>  
         `;
 
@@ -58,6 +71,18 @@ function getLoc(e){
             <div class="test2">
                 <div class="row" id="row">
             </div>
+            <div class="test3">
+            <div class="card w-100">
+                <div class="card-header">
+                    <h4>Hourly Weather Forecast</h4> 
+                </div>
+                <div class="card-body">
+                    <div class="scrollmenu">
+                        <div class="row flex-row flex-nowrap">
+                        </div>
+                    </div>
+                </div>
+            </div> 
         `
         console.log('Location not found', err)
         
