@@ -4,6 +4,25 @@
     position: relative;
 }
 
+html {
+    --thumbBG: #afafaf;
+  }
+  body::-webkit-scrollbar {
+    width: 11px;
+  }
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
+  }
+    
 .welcome{
     text-align: center;
 }
@@ -83,18 +102,25 @@ input:hover{
 
 .test3{
     padding-top: 20px;
-    display: block;
+    display:inline-flexbox;
 }
 
 .test3 .col-sm-1{
-    box-sizing: border-box;
+    box-sizing: content-box;
+    text-align: center;
 }
 
 .test3 .weatherIcon3{
-    height: 30px;
-    width: 30px;
+    height: 36px;
+    width: 36px;
 }
 
 .test3 .time{
     margin-bottom: 0;
+}
+
+.test3 .scrollmenu {
+    overflow:auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
 }
