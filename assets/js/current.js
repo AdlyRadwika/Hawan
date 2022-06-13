@@ -53,7 +53,7 @@ function getLoc(e){
                     <h4>Hourly Weather Forecast</h4> 
                 </div>
                 <div class="card-body">
-                    <div class="scrollmenu">
+                    <div class="scrollmenu" data-simplebar>
                         <div class="row flex-row flex-nowrap">
                         </div>
                     </div>
