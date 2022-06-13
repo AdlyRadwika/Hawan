@@ -10,13 +10,21 @@ function getLoc(e){
     .then((response) => response.json())
     .then((data) => {
         
-        const days = document.querySelector(".test3 .row");
-        days.innerHTML = ``;
+        const hourly = document.querySelector(".test3 .row");
+        hourly.innerHTML = ``;
 
-        for (let i = 0; i < 24; i++) {            
-            days.innerHTML += `                                               
+        
+
+
+        for (let i = 0; i < 24; i++) {
+            
+            var hours = ""+data.days[0].hours[i].datetime.slice(0,5);
+            
+            
+
+            hourly.innerHTML += `                                               
             <div class="col-sm-1">
-                <p class="time">${data.days[0].hours[i].datetime}</p>
+                <p class="time">${hours}</p>
                 <image src="assets/icons2/${data.days[0].hours[i].icon}.svg" class="weatherIcon3"/>
                 <p>${data.days[0].hours[i].temp}°C</p>
             </div>
