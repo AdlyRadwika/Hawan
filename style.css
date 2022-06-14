@@ -124,3 +124,28 @@ input:hover{
     white-space: nowrap;
     scroll-behavior: smooth;
 }
+
+.test4{
+    padding-top: 20px;
+    display:inline-flexbox;
+}
+
+.test4 .col-sm-1{
+    box-sizing: content-box;
+    text-align: center;
+}
+
+.test4 .weatherIcon3{
+    height: 36px;
+    width: 36px;
+}
+
+.test4 .time{
+    margin-bottom: 0;
+}
+
+.test4 .scrollmenu {
+    overflow:auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
