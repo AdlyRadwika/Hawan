@@ -24,14 +24,6 @@ html {
     border: 3px solid var(--scrollbarBG);
   }
 
-/* BACK TO TOP BUTTON */
-#btn-back-to-top {
-    position: fixed;
-    bottom: 30px;
-    right: 60px;
-    display: none;
-  }
-
   /* WELCOME */
 .welcome{
     text-align: center;
@@ -158,3 +150,16 @@ input{
     white-space: nowrap;
     scroll-behavior: smooth;
 }
+
+/* footer */
+
+
+.footer-message{
+    text-align: center;
+}
+
+.footer-message .text{
+    color: #f8f9fa;
+    margin-bottom: 0;
+}
+
