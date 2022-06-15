@@ -14,15 +14,20 @@
 </head>
 <body>
     <main>
-        <!-- welcome message  -->
-        <div class="welcome">
+        <!-- welcome msg  -->
+        <div class="welcome mx-auto bg-light">
             <h1>Welcome to Hawan!</h1>
             <p>You can check weather forecast here.</p>
         </div>
-        <!-- Search box -->
-        <div class="search">
-            <input id="locName" class="form-control w-75 mx-auto" type="search" placeholder="Search by cities">
-        </div>
+        <!-- header  -->
+        <nav class="navbar sticky-top bg-light">
+            <!-- Search box -->
+            <div class="container-fluid">
+                <div class="search mx-auto w-75">
+                    <input id="locName" class="form-control" type="search" placeholder="Search by cities">
+                </div>
+            </div>
+        </nav>
         <!-- weather info container  -->
         <div class="container">
             <!-- current weather -->

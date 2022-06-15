@@ -1,5 +1,3 @@
-// document.querySelector('#search').addEventListener('click', getLoc)
-
 document.querySelector('#locName').addEventListener('search', getLoc)
 
 function getLoc(e){
