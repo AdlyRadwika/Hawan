@@ -6,6 +6,7 @@
 
 html {
     --thumbBG: #afafaf;
+    background-color: #f8f9fa;
   }
   body::-webkit-scrollbar {
     width: 11px;
@@ -21,6 +22,14 @@ html {
     background-color: var(--thumbBG) ;
     border-radius: 6px;
     border: 3px solid var(--scrollbarBG);
+  }
+
+/* BACK TO TOP BUTTON */
+#btn-back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 60px;
+    display: none;
   }
 
   /* WELCOME */
