@@ -73,10 +73,7 @@ function getLoc(e){
             </div>
         </div>
     </div> 
-        `;
-
-    }).catch((err) => {
-
+        `;}).catch((err) => {
         document.querySelector(".container").innerHTML = `
             <div class="test">
                 <h1>Location not found!</h1>
@@ -89,11 +86,9 @@ function getLoc(e){
             <div class="test4">
             </div> 
         `
-        console.log('Location not found', err)
-        
+        console.log('Location not found', err)       
     ;});
     e.preventDefault();
-
 }
 
 function timeAgo(ts) {
