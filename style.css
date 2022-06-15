@@ -22,11 +22,13 @@ html {
     border-radius: 6px;
     border: 3px solid var(--scrollbarBG);
   }
-    
+
+  /* WELCOME */
 .welcome{
     text-align: center;
 }
 
+/* SEARCH BOX/BAR  */
 .search{
     height: 45px;
 }
@@ -46,15 +48,14 @@ input:hover{
     box-shadow:4px 4px 10px rgba(0,0,0,0.7);
 }
 
+/* CONTENT */
 .container{
     padding: 40px;
     margin: auto;
     display: relative;
 }
 
-/* .container .card-header{
-     background-color: darkgray;
-} */
+/* CURRENT WEATHER  */
 .locInfo .conds{
     text-align: center;
 }
@@ -95,11 +96,13 @@ input:hover{
     text-align: center;
 }
 
+/* 3 DAYS WEATHER */
 .weatherIcon2{
     height: 128px;
     width: 128px;
 }
 
+/* 24 HOURS/HOURLY FORECAST  */
 .test3{
     padding-top: 20px;
     display:inline-flexbox;
@@ -125,6 +128,7 @@ input:hover{
     scroll-behavior: smooth;
 }
 
+/* 7 DAYS FORECAST  */
 .test4{
     padding-top: 20px;
     display:inline-flexbox;
