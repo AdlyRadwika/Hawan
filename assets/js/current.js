@@ -59,7 +59,20 @@ function getLoc(e){
                     </div>
                 </div>
             </div>
-        </div>  
+        </div> 
+        <div class="test4">
+        <div class="card w-100">
+            <div class="card-header">
+                <h4>7 Days Weather Forecast</h4> 
+            </div>
+            <div class="card-body">
+                <div class="scrollmenu" data-simplebar>
+                    <div class="row flex-row flex-nowrap">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
         `;
 
     }).catch((err) => {
@@ -72,7 +85,8 @@ function getLoc(e){
                 <div class="row" id="row">
             </div>
             <div class="test3">
-
+            </div>
+            <div class="test4">
             </div> 
         `
         console.log('Location not found', err)
