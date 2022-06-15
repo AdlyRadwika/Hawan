@@ -16,18 +16,20 @@
 </head>
 <body>
     <main>
-        <!-- welcome msg  -->
-        <div class="welcome mx-auto">
-            <h1>Welcome to Hawan!</h1>
-            <p>You can check weather forecast here.</p>
-        </div>
         <!-- header  -->
-        <nav class="navbar sticky-top">
+        <nav class="navbar navbar-expand-lg sticky-top">
             <!-- Search box -->
-            <div class="container-fluid">
-                <div class="search mx-auto w-75">
-                    <input id="locName" class="form-control" type="search" placeholder="Search by cities">
+            <div class="container-fluid">                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03" toggle="collapse" data-target=".navbar-collapse">
+                    <h1 class="mx-auto">Hawan</h1>
+                    <div class="search mx-auto w-75">
+                        <input id="locName" class="form-control" type="search" placeholder="Search by cities">
+                    </div>
                 </div>
+
             </div>
         </nav>
         <!-- weather info container  -->
@@ -217,8 +219,6 @@
             </div>
         </footer>
     </main>
-    <!-- back to top js  -->
-    <script src="/assets/js/top.js"></script>
     <!-- current weather js -->
     <script src="/assets/js/current.js"></script>
     <!-- 3 days js  -->
@@ -228,7 +228,6 @@
     <!-- 7 days forecast js  -->
     <script src="/assets/js/7days.js"></script>
     <!-- bootstrap js  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <!-- simplebar js -->
     <script src="https://cdn.jsdelivr.net/npm/simplebar@5.3.8/dist/simplebar.min.js"></script>

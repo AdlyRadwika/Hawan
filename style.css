@@ -36,14 +36,18 @@ nav{
     background-color: #8ba6a9;
 }
 
-.welcome p{
-    margin-bottom: 0;
+nav h1{
+    text-align: center;
+}
+
+.navbar-toggler{
+    margin-bottom: 10px;
 }
 
 /* SEARCH BOX/BAR  */
 
 input{
-    text-align: center;
+    text-align: start;
     height: 45px;
     box-sizing: content-box;
     border-radius: 15px;
