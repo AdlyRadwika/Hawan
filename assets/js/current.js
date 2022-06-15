@@ -1,6 +1,5 @@
-// document.querySelector('#search').addEventListener('click', getLoc)
-
 document.querySelector('#locName').addEventListener('search', getLoc)
+document.querySelector('.submit').addEventListener('click', getLoc)
 
 function getLoc(e){
     const name = document.querySelector("#locName").value;
@@ -43,11 +42,11 @@ function getLoc(e){
                     Updated ${timeAgo(timeStamp)}
                 </div>
         </div>
-        <div class="test2">
+        <div class="test2" data-aos="zoom-out-right" data-aos-duration="1700">
             <div class="row" id="row">
             </div>
         </div>
-        <div class="test3">
+        <div class="test3" data-aos="zoom-in-up" data-aos-duration="1800">
             <div class="card w-100">
                 <div class="card-header">
                     <h4>Hourly Weather Forecast</h4> 
@@ -59,27 +58,36 @@ function getLoc(e){
                     </div>
                 </div>
             </div>
-        </div>  
-        `;
-
-    }).catch((err) => {
-
+        </div> 
+        <div class="test4" data-aos="zoom-in-down" data-aos-duration="1900">
+        <div class="card w-100">
+            <div class="card-header">
+                <h4>7 Days Weather Forecast</h4> 
+            </div>
+            <div class="card-body">
+                <div class="scrollmenu" data-simplebar>
+                    <div class="row flex-row flex-nowrap">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+        `;}).catch((err) => {
         document.querySelector(".container").innerHTML = `
             <div class="test">
                 <h1>Location not found!</h1>
             </div>
-            <div class="test2">
+            <div class="test2" data-aos="zoom-out-right" data-aos-duration="1750">
                 <div class="row" id="row">
             </div>
-            <div class="test3">
-
+            <div class="test3" data-aos="zoom-in-up" data-aos-duration="1800">
+            </div>
+            <div class="test4" data-aos="zoom-in-down" data-aos-duration="1900">
             </div> 
         `
-        console.log('Location not found', err)
-        
+        console.log('Location not found', err)       
     ;});
     e.preventDefault();
-
 }
 
 function timeAgo(ts) {

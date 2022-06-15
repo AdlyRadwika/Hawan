@@ -9,20 +9,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- main css  -->
     <link rel="stylesheet" href="style.css">
-    <!-- simple bar -->
+    <!-- simple bar css-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@5.3.8/dist/simplebar.css"/>
+    <!-- aos css  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,500;1,600&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
-        <!-- welcome message  -->
-        <div class="welcome">
-            <h1>Welcome to Hawan!</h1>
-            <p>You can check weather forecast here.</p>
-        </div>
-        <!-- Search box -->
-        <div class="search">
-            <input id="locName" class="form-control w-75 mx-auto" type="search" placeholder="Search by cities">
-        </div>
+        <!-- header  -->
+        <nav class="navbar navbar-expand-lg sticky-top">
+            <!-- Search box -->
+            <div class="container-fluid">                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03" toggle="collapse" data-target=".navbar-collapse">
+                    <h1 class="mx-auto">Hawan</h1>
+                    <div class="search mx-auto w-75">
+                        <input id="locName" class="form-control" type="search" placeholder="Search by cities">
+                        <button class="submit" type="submit">Search</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
         <!-- weather info container  -->
         <div class="container">
             <!-- current weather -->
@@ -59,32 +72,32 @@
                 </div>
             </div>
             <!-- 3 days weather -->
-            <div class="test2">
+            <div class="test2" data-aos="zoom-out-right" data-aos-duration="750">
                 <div class="row" id="row">
                     <!-- today -->
                     <div class="col-md-4">
-                        <div class="card w-100 h-90">
-                            <h1 class="card-header">abc</h1>
+                        <div class="card w-100 h-100">
+                            <h1 class="card-header">Today</h1>
                             <div class="card-body">
                                 <div class="locInfo">
                                     <div class="conds">
-                                        <img src="assets/icons2/${data.days[i].icon}.svg" class="weatherIcon2 mx-auto">
+                                        <img src="assets/icons2/cloudy.svg" class="weatherIcon2 mx-auto">
                                         <div class="desc">
-                                            <h4>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h4>
+                                            <h4>Cloudy</h4>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-4">
                                             <h5>Max Temp.</h5>
-                                            <p>${data.days[i].tempmax}°C</p>
+                                            <p>15°C</p>
                                         </div>
                                         <div class="col-4">
                                             <h5>Avg Temp.</h5>
-                                            <p>${data.days[i].temp}°C</p>
+                                            <p>12°C</p>
                                         </div>
                                         <div class="col-4">
                                             <h5>Min Temp.</h5>
-                                            <p>${data.days[i].tempmin}°C</p>
+                                            <p>10°C</p>
                                         </div>    
                                     </div>
                                 </div>  
@@ -94,27 +107,27 @@
                     <!-- tomorrow  -->
                     <div class="col-md-4">
                         <div class="card w-100 h-100">
-                            <h1 class="card-header">bcd</h1>
+                            <h1 class="card-header">Tommorow</h1>
                             <div class="card-body">
                                 <div class="locInfo">
                                     <div class="conds">
-                                        <img src="assets/icons2/${data.days[i].icon}.svg" class="weatherIcon2 mx-auto">
+                                        <img src="assets/icons2/fog.svg" class="weatherIcon2 mx-auto">
                                         <div class="desc">
-                                            <h4>A</h4>
+                                            <h4>Fog</h4>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-4">
                                             <h5>Max Temp.</h5>
-                                            <p>${data.days[i].tempmax}°C</p>
+                                            <p>20°C</p>
                                         </div>
                                         <div class="col-4">
                                             <h5>Avg Temp.</h5>
-                                            <p>${data.days[i].temp}°C</p>
+                                            <p>18°C</p>
                                         </div>
                                         <div class="col-4">
                                             <h5>Min Temp.</h5>
-                                            <p>${data.days[i].tempmin}°C</p>
+                                            <p>15°C</p>
                                         </div>    
                                     </div>
                                 </div>  
@@ -124,27 +137,27 @@
                     <!-- day after tmr -->
                     <div class="col-md-4">
                         <div class="card w-100 h-100">
-                            <h1 class="card-header">def</h1>
+                            <h1 class="card-header">After Tomorrow</h1>
                             <div class="card-body">
                                 <div class="locInfo">
                                     <div class="conds">
-                                        <img src="assets/icons2/${data.days[i].icon}.svg" class="weatherIcon2 mx-auto">
+                                        <img src="assets/icons2/rain.svg" class="weatherIcon2 mx-auto">
                                         <div class="desc">
-                                            <h4>${data.days[i].description}</h4>
+                                            <h4>Rain</h4>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-4">
                                             <h5>Max Temp.</h5>
-                                            <p>${data.days[i].tempmax}°C</p>
+                                            <p>15°C</p>
                                         </div>
                                         <div class="col-4">
                                             <h5>Avg Temp.</h5>
-                                            <p>${data.days[i].temp}°C</p>
+                                            <p>12°C</p>
                                         </div>
                                         <div class="col-4">
                                             <h5>Min Temp.</h5>
-                                            <p>${data.days[i].tempmin}°C</p>
+                                            <p>9°C</p>
                                         </div>    
                                     </div>
                                 </div>  
@@ -153,8 +166,8 @@
                     </div>                
                 </div>            
             </div>
-            <!-- today's 24 hours  -->
-            <div class="test3">
+            <!-- today's 24 hours / hourly forecast  -->
+            <div class="test3" data-aos="zoom-in-up" data-aos-duration="800">
                 <div class="card w-100">
                     <div class="card-header">
                         <h4>Hourly Weather Forecast</h4> 
@@ -164,13 +177,13 @@
                             <div class="row flex-row flex-nowrap">
                                 <div class="col-sm-1">
                                     <p class="time">00:00</p>
-                                    <image src="assets/icons2/clear-day.svg" class="weatherIcon3"/>
-                                    <p>26°C</p>
+                                    <image src="assets/icons2/clear-night.svg" class="weatherIcon3"/>
+                                    <p>20°C</p>
                                 </div>
                                 <div class="col-sm-1">
-                                    <p class="time">00:00</p>
-                                    <image src="assets/icons2/clear-day.svg" class="weatherIcon3"/>
-                                    <p>26°C</p>
+                                    <p class="time">01:00</p>
+                                    <image src="assets/icons2/showers-night.svg" class="weatherIcon3"/>
+                                    <p>17°C</p>
                                 </div>                                                             
                             </div>
                         </div>
@@ -178,7 +191,7 @@
                 </div>
             </div>
             <!-- 7 days forecast  -->
-            <div class="test4">
+            <div class="test4" data-aos="zoom-in-down" data-aos-duration="800">
                 <div class="card w-100">
                     <div class="card-header">
                         <h4>7 Days Weather Forecast</h4> 
@@ -187,14 +200,14 @@
                         <div class="scrollmenu" data-simplebar>
                             <div class="row flex-row flex-nowrap">
                                 <div class="col-sm-1">
-                                    <p class="time">14 Jun</p>
-                                    <image src="assets/icons2/clear-day.svg" class="weatherIcon3"/>
-                                    <p>26°C</p>
+                                    <p class="time">Today</p>
+                                    <image src="assets/icons2/cloudy.svg" class="weatherIcon3"/>
+                                    <p>12°C</p>
                                 </div>
                                 <div class="col-sm-1">
-                                    <p class="time">15 Jun</p>
+                                    <p class="time">Tomorrow</p>
                                     <image src="assets/icons2/clear-day.svg" class="weatherIcon3"/>
-                                    <p>26°C</p>
+                                    <p>18°C</p>
                                 </div>                                                             
                             </div>
                         </div>
@@ -202,6 +215,13 @@
                 </div>
             </div>
         </div>
+        <footer>
+            <div class="footer-message">
+                <br>
+                <p class="text">Personal project made by <a href="https://github.com/AdlyRadwika/">Adly Radwika</a></p>
+                <br>
+            </div>
+        </footer>
     </main>
     <!-- current weather js -->
     <script src="/assets/js/current.js"></script>
@@ -209,10 +229,16 @@
     <script src="/assets/js/3days.js"></script>
     <!-- hourly forecast js  -->
     <script src="/assets/js/hourly.js"></script>
+    <!-- 7 days forecast js  -->
+    <script src="/assets/js/7days.js"></script>
     <!-- bootstrap js  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <!-- simplebar  -->
+    <!-- simplebar js -->
     <script src="https://cdn.jsdelivr.net/npm/simplebar@5.3.8/dist/simplebar.min.js"></script>
+    <!-- aos js  -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
