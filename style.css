@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     position: relative;
+    font-family: 'Epilogue', sans-serif;
 }
 
 html {
@@ -24,13 +25,6 @@ html {
     border: 3px solid var(--scrollbarBG);
   }
 
-  /* WELCOME */
-.welcome{
-    text-align: center;
-    color: white;
-    background-color: #8ba6a9;
-}
-
 /* NAVBAR  */
 nav{
     background-color: #8ba6a9;
@@ -38,6 +32,7 @@ nav{
 
 nav h1{
     text-align: center;
+    margin-top: 10px;
 }
 
 .navbar-toggler{
@@ -55,14 +50,6 @@ nav h1{
     border-color: #A7CECB;
     background-color: #A7CECB;
 }
-
-/* input{
-    text-align: start;
-    height: 45px;
-    box-sizing: content-box;
-    border-radius: 15px;
-    border:0;
-} */
 
 input {
     border: none;
@@ -198,6 +185,10 @@ button[type="submit"]:focus, input[type="search"]:focus {
     display:inline-flexbox;
 }
 
+.test3 h4{
+    margin-bottom: 0;
+}
+
 .test3 .col-sm-1{
     box-sizing: content-box;
     text-align: center;
@@ -222,6 +213,10 @@ button[type="submit"]:focus, input[type="search"]:focus {
 .test4{
     padding-top: 20px;
     display:inline-flexbox;
+}
+
+.test4 h4{
+    margin-bottom: 0;
 }
 
 .test4 .col-sm-1{

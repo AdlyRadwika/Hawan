@@ -1,4 +1,5 @@
 document.querySelector('#locName').addEventListener('search', getLoc)
+document.querySelector('.submit').addEventListener('click', getLoc)
 
 function getLoc(e){
     const name = document.querySelector("#locName").value;
@@ -29,4 +30,3 @@ function getLoc(e){
     ;});
     e.preventDefault();
 }
-
