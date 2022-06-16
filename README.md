@@ -1,6 +1,7 @@
 # Hawan
 
-You can check weather forecast [here!](https://adlyradwika.github.io/Hawan/index.html)
+You can check weather forecast [here!](https://adlyradwika.github.io/Hawan/index.html) It is inspired from Visual Crossing and BMKG website.
+
 
 # Features
 
@@ -13,3 +14,4 @@ You can check weather forecast [here!](https://adlyradwika.github.io/Hawan/index
 - [Bootstrap 5.2](https://getbootstrap.com/docs/5.2/getting-started/introduction/)
 - [AoS](http://michalsnik.github.io/aos/)
 - [Simplebar](https://github.com/Grsmto/simplebar)
+- [Visual Crossing's API](https://www.visualcrossing.com/weather-api)
