@@ -24,15 +24,15 @@ function getLoc(e){
                         </div>
                         <div class="row">
                             <div class="col-4">
-                                <h5>Temperature</h5>
+                                <h6>Temp.</h6>
                                 <p>${data.currentConditions.temp}°C</p>
                             </div>
                             <div class="col-4">
-                                <h5>Humidity</h5>
+                                <h6>Humidity</h6>
                                 <p>${data.currentConditions.humidity}%</p>
                             </div>
                             <div class="col-4">
-                                <h5>Wind</h5>
+                                <h6>Wind</h6>
                                 <p>${data.currentConditions.windspeed} kmh</p>
                             </div>    
                         </div>
